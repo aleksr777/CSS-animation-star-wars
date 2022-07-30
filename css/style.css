@@ -761,16 +761,3 @@ h2.animation-block__title {
 		transform: translate3d(-50%, -50%, -50000px);
 	}
 }
-
-.footer {
-	font-family: "Arial";
-	background-color: rgb(0, 0, 0);
-	color: rgb(255, 255, 255);
-	padding: 20px;
-}
-.footer__text {
-	font-size: 18px;
-}
-.footer__link {
-	color: rgb(0, 17, 255);
-}
