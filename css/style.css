@@ -594,15 +594,18 @@ h2.animation-block__title {
 	transform: translate3d(-20%, -20%, 100px); /* Сдвиг и увеличение*/
 }
 
+.main__dog {
+	margin-bottom: 100px;
+}
 .main__dog:not(:last-child) {
-	margin: 0 4% 0 0;
+	margin-right: 4%;
 }
 .dog {
 	display: inline-block;
 	position: relative;
 	width: 22%;
 	background-color: hsla(45, 85%, 72%, 0.685);
-	padding: 5px 5px 50px 5px;
+	padding: 5px 5px 0 5px;
 	outline: 4px double #2e2612;
 	perspective: 500px;
 	transform-style: preserve-3d;
