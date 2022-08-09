@@ -26,6 +26,7 @@
 
 body {
 	font-family: "Caveat";
+	user-select: none;
 }
 
 img {
