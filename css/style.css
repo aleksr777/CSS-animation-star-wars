@@ -466,7 +466,6 @@ h2.animation-block__title {
 	height: 90px;
 	border-radius: 50%;
 	background-color: #dddfe3;
-	margin: -45px 0 0 -45px;
 }
 
 .wheel__center-circle {
@@ -478,7 +477,6 @@ h2.animation-block__title {
 	height: 16px;
 	border-radius: 50%;
 	background-color: #000000;
-	margin: -8px 0 0 -8px;
 }
 
 .wheel__cutout {

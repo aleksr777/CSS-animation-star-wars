@@ -1,5 +1,5 @@
 # CSS-animation. My experiments.
 
-Мои работы по теме CSS-анимации.
+Учебная работа по теме CSS-анимации и CSS-позиционирования.
 
 Link: <https://aleksr777.github.io/CSS-animation-my-experiments/>
