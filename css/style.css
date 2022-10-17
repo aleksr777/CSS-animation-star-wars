@@ -9,6 +9,7 @@
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: "Star Jedi Rounded";
 	src: url("../fonts/StarJediRounded.woff2") format("woff2"), url("../fonts/StarJediRounded.woff") format("woff");
@@ -16,6 +17,7 @@
 	font-style: normal;
 	font-display: swap;
 }
+
 @font-face {
 	font-family: "Star Jedi Hollow";
 	src: url("../fonts/StarJediHollow.woff2") format("woff2"), url("../fonts/StarJediHollow.woff") format("woff");
@@ -40,6 +42,7 @@ img {
 	/* overflow: hidden; */
 	margin: 0 auto;
 }
+
 .header__title {
 	font-size: 80px;
 	text-align: center;
@@ -47,6 +50,7 @@ img {
 	padding: 20px;
 	margin: 0 0 30px 0;
 }
+
 .header__image {
 	text-align: center;
 	margin: 0 0 70px 0;
@@ -60,6 +64,7 @@ img {
 	font-weight: 700;
 	line-height: 0.9;
 }
+
 .main__animation-block {
 	position: relative;
 	width: 1200px;
@@ -68,6 +73,7 @@ img {
 	overflow: hidden;
 	background: url(../img/bg.jpg) 0 -115px no-repeat;
 }
+
 h2.animation-block__title {
 	font-size: 40px;
 	background-color: #fff;
@@ -75,18 +81,21 @@ h2.animation-block__title {
 	text-align: center;
 	line-height: 90%;
 }
+
 .road__image-1 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 2000px;
 }
+
 .road__image-2 {
 	position: absolute;
 	bottom: 0;
 	left: -2000px;
 	width: 2000px;
 }
+
 .animation-block__road {
 	position: absolute;
 	bottom: -20px;
@@ -101,22 +110,26 @@ h2.animation-block__title {
 	animation-fill-mode: backwards;
 	animation-play-state: running;
 }
+
 @keyframes road {
 	0% {
 		transform: translate(0, 0);
 	}
+
 	100% {
 		transform: translate(2000px, 0);
 	}
 }
 
-.animation-block:active > .my-car .my-car__tail-light {
+.animation-block:active>.my-car .my-car__tail-light {
 	background-color: #ff0000;
 }
-.animation-block:active > .my-car {
+
+.animation-block:active>.my-car {
 	animation-play-state: paused;
 }
-.animation-block:active > .my-car .wheel__body {
+
+.animation-block:active>.my-car .wheel__body {
 	animation-name: wheel-stop;
 	animation-duration: 2.1s;
 	animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
@@ -126,15 +139,18 @@ h2.animation-block__title {
 	animation-fill-mode: backwards;
 	animation-play-state: running;
 }
+
 @keyframes wheel-stop {
 	0% {
 		transform: rotate(900deg);
 	}
+
 	100% {
 		transform: rotate(0);
 	}
 }
-.animation-block:active > .animation-block__road {
+
+.animation-block:active>.animation-block__road {
 	animation-name: road-stop;
 	animation-duration: 2.1s;
 	animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
@@ -143,10 +159,12 @@ h2.animation-block__title {
 	animation-fill-mode: backwards;
 	animation-play-state: running;
 }
+
 @keyframes road-stop {
 	0% {
 		transform: translate(0, 0);
 	}
+
 	100% {
 		transform: translate(2000px, 0);
 	}
@@ -157,6 +175,7 @@ h2.animation-block__title {
 	top: 170px;
 	right: 200px;
 }
+
 .my-car {
 	z-index: 1;
 	width: 700px;
@@ -172,20 +191,25 @@ h2.animation-block__title {
 	animation-fill-mode: backwards;
 	animation-play-state: running;
 }
+
 @keyframes car {
 	0% {
 		transform: translate(920px, 0);
 	}
+
 	25% {
 		transform: translate(100px, 0);
 	}
+
 	75% {
 		transform: translate(-150px, 0);
 	}
+
 	100% {
 		transform: translate(-1100px, 0);
 	}
 }
+
 .my-car__body {
 	position: absolute;
 	top: 45px;
@@ -196,6 +220,7 @@ h2.animation-block__title {
 	overflow: hidden;
 	background-color: #586372;
 }
+
 .my-car__window-front {
 	position: absolute;
 	top: 26px;
@@ -207,6 +232,7 @@ h2.animation-block__title {
 	background-color: #2b323c;
 	transform: rotate(-8deg);
 }
+
 .my-car__window-back {
 	position: absolute;
 	top: 21px;
@@ -218,6 +244,7 @@ h2.animation-block__title {
 	background-color: #2b323c;
 	transform: rotate(6.5deg);
 }
+
 .my-car__patch-1 {
 	position: absolute;
 	top: 60px;
@@ -227,6 +254,7 @@ h2.animation-block__title {
 	transform: rotate(-3deg);
 	background-color: #586372;
 }
+
 .my-car__patch-2 {
 	position: absolute;
 	top: 53px;
@@ -235,6 +263,7 @@ h2.animation-block__title {
 	height: 60px;
 	background-color: #586372;
 }
+
 .my-car__patch-3 {
 	position: absolute;
 	top: 31px;
@@ -244,6 +273,7 @@ h2.animation-block__title {
 	background-color: #586372;
 	transform: rotate(15deg);
 }
+
 .my-car__septum-1 {
 	position: absolute;
 	top: 31px;
@@ -253,6 +283,7 @@ h2.animation-block__title {
 	background-color: #586372;
 	transform: rotate(-75deg);
 }
+
 .my-car__septum-2 {
 	position: absolute;
 	top: 55px;
@@ -262,6 +293,7 @@ h2.animation-block__title {
 	background-color: #586372;
 	transform: rotate(-20deg);
 }
+
 .my-car__septum-3 {
 	position: absolute;
 	top: 46px;
@@ -270,6 +302,7 @@ h2.animation-block__title {
 	height: 30px;
 	background-color: #586372;
 }
+
 .my-car__mirror {
 	position: absolute;
 	top: 47px;
@@ -280,6 +313,7 @@ h2.animation-block__title {
 	overflow: hidden;
 	background-color: #000000;
 }
+
 .my-car__headlight {
 	position: absolute;
 	top: 90px;
@@ -290,6 +324,7 @@ h2.animation-block__title {
 	overflow: hidden;
 	background-color: #bcbcbc;
 }
+
 .my-car__tail-light {
 	position: absolute;
 	top: 60px;
@@ -300,6 +335,7 @@ h2.animation-block__title {
 	overflow: hidden;
 	background-color: #790000;
 }
+
 .my-car__door {
 	position: absolute;
 	top: 66px;
@@ -312,6 +348,7 @@ h2.animation-block__title {
 	overflow: hidden;
 	background-color: #586372;
 }
+
 .my-car__handle {
 	position: absolute;
 	top: 88px;
@@ -324,6 +361,7 @@ h2.animation-block__title {
 	background-color: #586372;
 	transform: rotate(-3deg);
 }
+
 .my-car__roof-front {
 	position: absolute;
 	top: 17px;
@@ -335,6 +373,7 @@ h2.animation-block__title {
 	background-color: #586372;
 	transform: rotate(-8deg);
 }
+
 .my-car__roof-back {
 	position: absolute;
 	top: 13px;
@@ -346,6 +385,7 @@ h2.animation-block__title {
 	background-color: #586372;
 	transform: rotate(6deg);
 }
+
 .my-car__cross-arch-front {
 	position: absolute;
 	top: 105px;
@@ -357,6 +397,7 @@ h2.animation-block__title {
 	overflow: hidden;
 	z-index: 1;
 }
+
 .my-car__cross-arch-back {
 	position: absolute;
 	top: 105px;
@@ -368,18 +409,21 @@ h2.animation-block__title {
 	overflow: hidden;
 	z-index: 1;
 }
+
 .my-car__wheel-front {
 	position: absolute;
 	z-index: 2;
 	top: 117px;
 	left: 70px;
 }
+
 .my-car__wheel-back {
 	position: absolute;
 	z-index: 2;
 	top: 117px;
 	left: 520px;
 }
+
 .wheel__body {
 	width: 120px;
 	height: 120px;
@@ -394,40 +438,49 @@ h2.animation-block__title {
 	animation-fill-mode: backwards;
 	animation-play-state: running;
 }
+
 @keyframes wheel {
 	0% {
 		transform: rotate(700deg);
 	}
+
 	25% {
 		transform: rotate(-1500deg);
 	}
+
 	75% {
 		transform: rotate(-5000deg);
 	}
+
 	100% {
 		transform: rotate(-7300deg);
 	}
 }
+
 .wheel__disk {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
 	background-color: #dddfe3;
 	margin: -45px 0 0 -45px;
 }
+
 .wheel__center-circle {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
 	background-color: #000000;
 	margin: -8px 0 0 -8px;
 }
+
 .wheel__cutout {
 	position: absolute;
 	top: 56px;
@@ -438,12 +491,15 @@ h2.animation-block__title {
 	background-color: #000000;
 	transform-origin: 15px -11px;
 }
+
 .wheel__cutout_left {
 	transform: rotate(90deg);
 }
+
 .wheel__cutout_upper {
 	transform: rotate(-90deg);
 }
+
 .wheel__cutout_right {
 	transform: rotate(180deg);
 }
@@ -451,59 +507,11 @@ h2.animation-block__title {
 .main__card:not(:last-child) {
 	margin: 0 4% 0 0;
 }
-.card {
-	display: inline-block;
-}
-.card__body {
-	position: relative;
-	width: 180px;
-	height: 277px;
-	transition: all 1s ease 0s;
-	transform-style: preserve-3d;
-}
-.card__front,
-.card__back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	border: 1px solid #9c9c9c;
-	border-radius: 15px;
-	overflow: hidden;
-}
-.card__front {
-	transform: rotateY(-180deg);
-	background: url(../img/joker.jpg) 60% 60% / 40% no-repeat;
-	backface-visibility: hidden;
-}
-.card__front:active > .card__picture > img {
-	transform: scale(1.5);
-	opacity: 0;
-	transition: all 0.3s;
-}
-.card__front:active {
-	background: url(../img/joker.jpg) 0 0 / 97% no-repeat;
-	transition: all 0.3s;
-}
-.card__back {
-	z-index: 2;
-	transform: rotateY(0deg);
-	backface-visibility: hidden;
-}
-.card:hover .card__body {
-	transform: rotateY(-180deg);
-}
-
-.main__box {
-	text-align: center;
-	margin: 0;
-	padding: 0 0 200px 0;
-}
 
 .main__star-wars {
 	margin: 0 auto 50px auto;
 }
+
 .star-wars {
 	font-family: "Star Jedi";
 	font-size: 17px;
@@ -515,6 +523,7 @@ h2.animation-block__title {
 	background-color: rgb(0, 0, 0);
 	border-radius: 5%;
 }
+
 .star-wars__block {
 	margin: -300px auto 0 auto;
 	color: #e5b13a;
@@ -522,6 +531,7 @@ h2.animation-block__title {
 	height: 300%;
 	transform: rotateX(50deg);
 }
+
 .star-wars__title {
 	font-family: "Star Jedi";
 	font-size: 140px;
@@ -530,9 +540,11 @@ h2.animation-block__title {
 	line-height: 80%;
 	margin: 0 0 30px 0;
 }
+
 .star-wars__text {
 	margin: 620px 0 0 0;
 }
+
 .star-wars:hover .star-wars__block .star-wars__text {
 	transition-duration: 95s;
 	margin: -5000px 0 0 0;
@@ -544,28 +556,33 @@ h2.animation-block__title {
 	left: 100%;
 	opacity: 0;
 }
+
 .star-wars__image-2 {
 	position: absolute;
 	top: 43%;
 	left: 49.5%;
 	transform: translate3d(-50%, -50%, 0);
 	height: 115%;
-	width:108%;
+	width: 108%;
 	opacity: 0;
 }
-.star-wars:active >.star-wars__image-2 {
+
+.star-wars:active>.star-wars__image-2 {
 	opacity: 0.9;
 	transform: translate3d(-50%, -50%, 120px);
 	transition: transform 3s ease 0.3s, opacity 0.8s ease 0.3s;
 }
+
 .star-wars:hover {
 	background: url(../img/space.webp) center / 105% 105% no-repeat;
 	transition-duration: 2s;
 }
+
 .star-wars:active {
 	background: url(../img/space.webp) center / 200% 200% no-repeat;
 	transition-duration: 2s;
 }
+
 .star-wars:hover .star-wars__image {
 	opacity: 1;
 	animation-name: see-the-starship;
@@ -577,6 +594,7 @@ h2.animation-block__title {
 	animation-fill-mode: backwards;
 	animation-play-state: running;
 }
+
 @keyframes see-the-starship {
 	0% {
 		position: absolute;
@@ -584,12 +602,14 @@ h2.animation-block__title {
 		left: 50%;
 		transform: translate3d(-50%, 50%, 500px);
 	}
+
 	0.015% {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%, -50%, 0);
 	}
+
 	100% {
 		position: absolute;
 		top: 50%;
@@ -597,6 +617,7 @@ h2.animation-block__title {
 		transform: translate3d(-50%, -50%, 0);
 	}
 }
+
 .star-wars:active .star-wars__image {
 	opacity: 1;
 	animation-name: flight-to-hyperspace;
@@ -608,6 +629,7 @@ h2.animation-block__title {
 	animation-fill-mode: backwards;
 	animation-play-state: running;
 }
+
 @keyframes flight-to-hyperspace {
 	0% {
 		position: absolute;
@@ -615,12 +637,14 @@ h2.animation-block__title {
 		left: 50%;
 		transform: translate3d(-50%, -50%, 0);
 	}
+
 	9% {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%, -50%, 0);
 	}
+
 	100% {
 		position: absolute;
 		top: 50%;
