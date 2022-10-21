@@ -8,7 +8,7 @@
 * --------------
 * Educational work on the topic of CSS animation and CSS positioning from the site layout course.
 * Animation is implemented without the use of any layouts and blanks, only improvisation and imagination.
-*Images taken from the free internet.
+* Images taken from the free internet.
 * The car is "assembled" from div-blocks in order to practice css-positioning skills.
 * No JS code was used, only HTML and CSS.
 * --------------
