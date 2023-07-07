@@ -1,4 +1,4 @@
-# CSS-animation. My experiments.
+# CSS-animation. Star Wars.
  --------------
 * Link: <https://aleksr777.github.io/CSS-animation-star-wars/>
  --------------
