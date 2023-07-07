@@ -1,7 +1,5 @@
 @import "null.css";
 
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
-
 @font-face {
 	font-family: "Star Jedi";
 	src: url("../fonts/StarJedi.woff2") format("woff2"), url("../fonts/StarJedi.woff") format("woff");
@@ -27,8 +25,9 @@
 }
 
 body {
-	font-family: "Caveat";
+	font-family: "Star Jedi Rounded";
 	user-select: none;
+	background-color: #000000;
 }
 
 img {
@@ -39,16 +38,18 @@ img {
 .wrapper {
 	min-height: 100%;
 	max-width: 1500px;
-	padding: 50px 0 100px 0;
+	padding: 50px 0 50px 0;
 	margin: 0 auto;
 }
 
 .header__title {
+	color: #e5b13a;
+	font-family: "Star Jedi Hollow";
 	font-size: 80px;
 	text-align: center;
-	font-weight: 700;
+	font-weight: 400;
 	padding: 20px;
-	margin: 0 0 30px 0;
+	margin: 0 0 50px 0;
 }
 
 .header__image {
@@ -57,457 +58,19 @@ img {
 }
 
 .main__subtitle {
+	color: #e5b23ad0;
+	font-family: "Star Jedi Rounded";
 	text-align: center;
-	font-size: 50px;
+	font-size: 24px;
 	margin: 0 0 15px 0;
 	padding: 0 8%;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 0.9;
-}
-
-.main__animation-block {
-	position: relative;
-	width: 1200px;
-	height: 500px;
-	margin: 0 auto 70px auto;
-	overflow: hidden;
-	background: url(../img/bg.jpg) 0 -115px no-repeat;
-}
-
-h2.animation-block__title {
-	font-size: 40px;
-	background-color: #fff;
-	opacity: 0.8;
-	text-align: center;
-	line-height: 90%;
-}
-
-.road__image-1 {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 2000px;
-}
-
-.road__image-2 {
-	position: absolute;
-	bottom: 0;
-	left: -2000px;
-	width: 2000px;
-}
-
-.animation-block__road {
-	position: absolute;
-	bottom: -20px;
-	left: 0;
-	z-index: 0;
-	animation-name: road;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-delay: 0s;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-	animation-fill-mode: backwards;
-	animation-play-state: running;
-}
-
-@keyframes road {
-	0% {
-		transform: translate(0, 0);
-	}
-
-	100% {
-		transform: translate(2000px, 0);
-	}
-}
-
-.animation-block:active>.my-car .my-car__tail-light {
-	background-color: #ff0000;
-}
-
-.animation-block:active>.my-car {
-	animation-play-state: paused;
-}
-
-.animation-block:active>.my-car .wheel__body {
-	animation-name: wheel-stop;
-	animation-duration: 2.1s;
-	animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
-	animation-delay: 0s;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: backwards;
-	animation-play-state: running;
-}
-
-@keyframes wheel-stop {
-	0% {
-		transform: rotate(900deg);
-	}
-
-	100% {
-		transform: rotate(0);
-	}
-}
-
-.animation-block:active>.animation-block__road {
-	animation-name: road-stop;
-	animation-duration: 2.1s;
-	animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: backwards;
-	animation-play-state: running;
-}
-
-@keyframes road-stop {
-	0% {
-		transform: translate(0, 0);
-	}
-
-	100% {
-		transform: translate(2000px, 0);
-	}
-}
-
-.animation-block__my-car {
-	position: absolute;
-	top: 170px;
-	right: 200px;
-}
-
-.my-car {
-	z-index: 1;
-	width: 700px;
-	height: 237px;
-	background-color: rgba(255, 255, 255, 0);
-	overflow: hidden;
-	animation-name: car;
-	animation-duration: 10s;
-	animation-timing-function: ease;
-	animation-delay: 0s;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-	animation-fill-mode: backwards;
-	animation-play-state: running;
-}
-
-@keyframes car {
-	0% {
-		transform: translate(920px, 0);
-	}
-
-	25% {
-		transform: translate(100px, 0);
-	}
-
-	75% {
-		transform: translate(-150px, 0);
-	}
-
-	100% {
-		transform: translate(-1100px, 0);
-	}
-}
-
-.my-car__body {
-	position: absolute;
-	top: 45px;
-	left: 0;
-	width: 700px;
-	height: 150px;
-	border-radius: 98% 19% 10% 10% / 61% 6% 44% 17%;
-	overflow: hidden;
-	background-color: #586372;
-}
-
-.my-car__window-front {
-	position: absolute;
-	top: 26px;
-	left: 140px;
-	width: 300px;
-	height: 80px;
-	border-radius: 100% 0% 0% 100% / 100% 0% 0% 0%;
-	overflow: hidden;
-	background-color: #2b323c;
-	transform: rotate(-8deg);
-}
-
-.my-car__window-back {
-	position: absolute;
-	top: 21px;
-	left: 420px;
-	width: 270px;
-	height: 70px;
-	border-radius: 0% 98% 10% 7% / 10% 100% 0% 0%;
-	overflow: hidden;
-	background-color: #2b323c;
-	transform: rotate(6.5deg);
-}
-
-.my-car__patch-1 {
-	position: absolute;
-	top: 60px;
-	left: 150px;
-	width: 480px;
-	height: 70px;
-	transform: rotate(-3deg);
-	background-color: #586372;
-}
-
-.my-car__patch-2 {
-	position: absolute;
-	top: 53px;
-	left: 620px;
-	width: 70px;
-	height: 60px;
-	background-color: #586372;
-}
-
-.my-car__patch-3 {
-	position: absolute;
-	top: 31px;
-	left: 523px;
-	width: 90px;
-	height: 35px;
-	background-color: #586372;
-	transform: rotate(15deg);
-}
-
-.my-car__septum-1 {
-	position: absolute;
-	top: 31px;
-	left: 385px;
-	width: 70px;
-	height: 10px;
-	background-color: #586372;
-	transform: rotate(-75deg);
-}
-
-.my-car__septum-2 {
-	position: absolute;
-	top: 55px;
-	left: 200px;
-	width: 40px;
-	height: 22px;
-	background-color: #586372;
-	transform: rotate(-20deg);
-}
-
-.my-car__septum-3 {
-	position: absolute;
-	top: 46px;
-	left: 237px;
-	width: 20px;
-	height: 30px;
-	background-color: #586372;
-}
-
-.my-car__mirror {
-	position: absolute;
-	top: 47px;
-	left: 230px;
-	width: 40px;
-	height: 30px;
-	border-radius: 54% 30% 48% 37% / 47% 20% 40% 33%;
-	overflow: hidden;
-	background-color: #000000;
-}
-
-.my-car__headlight {
-	position: absolute;
-	top: 90px;
-	left: 20px;
-	width: 70px;
-	height: 30px;
-	border-radius: 94% 0% 84% 13% / 73% 0% 91% 9%;
-	overflow: hidden;
-	background-color: #bcbcbc;
-}
-
-.my-car__tail-light {
-	position: absolute;
-	top: 60px;
-	left: 663px;
-	width: 40px;
-	height: 30px;
-	border-radius: 88% 5% 84% 13% / 50% 18% 12% 9%;
-	overflow: hidden;
-	background-color: #790000;
-}
-
-.my-car__door {
-	position: absolute;
-	top: 66px;
-	left: 215px;
-	width: 200px;
-	height: 110px;
-	border: #000000 1px solid;
-	border-top: 0;
-	border-radius: 0% 0% 100% 100% / 0% 0% 66% 31%;
-	overflow: hidden;
-	background-color: #586372;
-}
-
-.my-car__handle {
-	position: absolute;
-	top: 88px;
-	left: 360px;
-	width: 35px;
-	height: 7px;
-	border: #000000 1px solid;
-	border-radius: 52% 48% 47% 57% / 27% 41% 59% 55%;
-	overflow: hidden;
-	background-color: #586372;
-	transform: rotate(-3deg);
-}
-
-.my-car__roof-front {
-	position: absolute;
-	top: 17px;
-	left: 140px;
-	width: 300px;
-	height: 80px;
-	border-radius: 100% 0% 0% 100% / 100% 0% 0% 0%;
-	overflow: hidden;
-	background-color: #586372;
-	transform: rotate(-8deg);
-}
-
-.my-car__roof-back {
-	position: absolute;
-	top: 13px;
-	left: 420px;
-	width: 270px;
-	height: 70px;
-	border-radius: 0% 98% 10% 7% / 10% 100% 0% 0%;
-	overflow: hidden;
-	background-color: #586372;
-	transform: rotate(6deg);
-}
-
-.my-car__cross-arch-front {
-	position: absolute;
-	top: 105px;
-	left: 60px;
-	width: 140px;
-	height: 90px;
-	background-color: #000000;
-	border-radius: 53% 51% 15% 60% / 92% 94% 0% 0%;
-	overflow: hidden;
-	z-index: 1;
-}
-
-.my-car__cross-arch-back {
-	position: absolute;
-	top: 105px;
-	left: 510px;
-	width: 140px;
-	height: 90px;
-	background-color: #000000;
-	border-radius: 53% 51% 15% 60% / 92% 94% 0% 0%;
-	overflow: hidden;
-	z-index: 1;
-}
-
-.my-car__wheel-front {
-	position: absolute;
-	z-index: 2;
-	top: 117px;
-	left: 70px;
-}
-
-.my-car__wheel-back {
-	position: absolute;
-	z-index: 2;
-	top: 117px;
-	left: 520px;
-}
-
-.wheel__body {
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
-	background-color: #363636;
-	animation-name: wheel;
-	animation-duration: 10s;
-	animation-timing-function: linear;
-	animation-delay: 0s;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-	animation-fill-mode: backwards;
-	animation-play-state: running;
-}
-
-@keyframes wheel {
-	0% {
-		transform: rotate(700deg);
-	}
-
-	25% {
-		transform: rotate(-1500deg);
-	}
-
-	75% {
-		transform: rotate(-5000deg);
-	}
-
-	100% {
-		transform: rotate(-7300deg);
-	}
-}
-
-.wheel__disk {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 90px;
-	height: 90px;
-	border-radius: 50%;
-	background-color: #dddfe3;
-}
-
-.wheel__center-circle {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 16px;
-	height: 16px;
-	border-radius: 50%;
-	background-color: #000000;
-}
-
-.wheel__cutout {
-	position: absolute;
-	top: 56px;
-	left: 30px;
-	width: 30px;
-	height: 31px;
-	border-radius: 51% 49% 48% 54% / 86% 86% 14% 13%;
-	background-color: #000000;
-	transform-origin: 15px -11px;
-}
-
-.wheel__cutout_left {
-	transform: rotate(90deg);
-}
-
-.wheel__cutout_upper {
-	transform: rotate(-90deg);
-}
-
-.wheel__cutout_right {
-	transform: rotate(180deg);
-}
-
-.main__card:not(:last-child) {
-	margin: 0 4% 0 0;
 }
 
 .main__star-wars {
 	margin: 0 auto 100px auto;
+	border: #9999CB solid 1px;
 }
 
 .star-wars {
@@ -519,7 +82,7 @@ h2.animation-block__title {
 	height: 500px;
 	background: url(../img/space.webp) center / 100% 100% no-repeat;
 	background-color: rgb(0, 0, 0);
-	border-radius: 5%;
+	border-radius: 15px;
 }
 
 .star-wars__block {
@@ -531,7 +94,6 @@ h2.animation-block__title {
 }
 
 .star-wars__title {
-	font-family: "Star Jedi";
 	font-size: 140px;
 	font-weight: 900;
 	text-align: center;
@@ -539,12 +101,18 @@ h2.animation-block__title {
 	margin: 0 0 40px 0;
 }
 
-.star-wars__text {
+.star-wars__box-text {
 	margin: 620px 0 0 0;
 }
 
-.star-wars:hover .star-wars__block .star-wars__text {
-	transition-duration: 95s;
+.star-wars__text {
+	letter-spacing: 8px;
+	padding: 10px 0;
+	font-size:25px;
+}
+
+.star-wars:hover .star-wars__block .star-wars__box-text {
+	transition-duration: 90s;
 	margin: -5000px 0 0 0;
 }
 
@@ -565,7 +133,7 @@ h2.animation-block__title {
 	opacity: 0;
 }
 
-.star-wars:active>.star-wars__image-2 {
+.star-wars:active > .star-wars__image-2 {
 	opacity: 0.9;
 	transform: translate3d(-50%, -50%, 120px);
 	transition: transform 3s ease 0.3s, opacity 0.8s ease 0.3s;

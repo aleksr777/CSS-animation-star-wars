@@ -1,15 +1,9 @@
 # CSS-animation. My experiments.
  --------------
-* Link: <https://aleksr777.github.io/CSS-animation-my-experiments/>
+* Link: <https://aleksr777.github.io/CSS-animation-star-wars/>
  --------------
-* Учебная работа по теме CSS-анимации и CSS-позиционирования из курса по вёрстке сайтов.
-* Анимация реализована без использования каких-либо макетов и заготовок, только импровизация и воображение.
-* Изображения взяты из свободного доступа в интернете.
-* Автомобиль "собран" из div-блоков с целью отработки навыков css-позиционирования.
+* Это небольшой эксперимент реализации CSS-анимации по тематике "Звёздных войн".
 * JS-код не использовался, только HTML и CSS.
  --------------
-* Educational work on the topic of CSS animation and CSS positioning from the site layout course.
-* Animation is implemented without the use of any layouts and blanks, only improvisation and imagination.
-* Images taken from the free internet.
-* The car is "assembled" from div-blocks in order to practice css-positioning skills.
+* This is a small experiment of implementing Star Wars-themed CSS animations.
 * No JS code was used, only HTML and CSS.
