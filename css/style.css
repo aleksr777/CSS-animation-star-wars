@@ -37,8 +37,8 @@ img {
 
 .wrapper {
 	min-height: 100%;
-	max-width: 1500px;
-	padding: 50px 0 50px 0;
+	max-width: 1200px;
+	padding: 50px 15px;
 	margin: 0 auto;
 }
 
@@ -48,8 +48,7 @@ img {
 	font-size: 80px;
 	text-align: center;
 	font-weight: 400;
-	padding: 20px;
-	margin: 0 0 50px 0;
+	margin: 0 0 80px 0;
 }
 
 .header__image {
@@ -63,13 +62,12 @@ img {
 	text-align: center;
 	font-size: 24px;
 	margin: 0 0 15px 0;
-	padding: 0 8%;
 	font-weight: 400;
 	line-height: 0.9;
 }
 
 .main__star-wars {
-	margin: 0 auto 100px auto;
+	margin: 0 auto 90px auto;
 	border: #9999CB solid 1px;
 }
 
@@ -78,7 +76,7 @@ img {
 	font-size: 17px;
 	overflow: hidden;
 	perspective: 250px;
-	max-width: 80%;
+	width: 1000px;
 	height: 500px;
 	background: url(../img/space.webp) center / 100% 100% no-repeat;
 	background-color: rgb(0, 0, 0);
@@ -94,10 +92,9 @@ img {
 }
 
 .star-wars__title {
-	font-size: 140px;
+	font-size: 110px;
 	font-weight: 900;
 	text-align: center;
-	line-height: 80%;
 	margin: 0 0 40px 0;
 }
 
@@ -108,7 +105,7 @@ img {
 .star-wars__text {
 	letter-spacing: 8px;
 	padding: 10px 0;
-	font-size:25px;
+	font-size: 23px;
 }
 
 .star-wars:hover .star-wars__block .star-wars__box-text {
@@ -116,14 +113,14 @@ img {
 	margin: -5000px 0 0 0;
 }
 
-.star-wars__image {
+.star-wars__starship-image {
 	position: absolute;
 	top: 100%;
 	left: 100%;
 	opacity: 0;
 }
 
-.star-wars__image-2 {
+.star-wars__hyperspace-image {
 	position: absolute;
 	top: 43%;
 	left: 49.5%;
@@ -133,7 +130,7 @@ img {
 	opacity: 0;
 }
 
-.star-wars:active > .star-wars__image-2 {
+.star-wars:active > .star-wars__hyperspace-image {
 	opacity: 0.9;
 	transform: translate3d(-50%, -50%, 120px);
 	transition: transform 3s ease 0.3s, opacity 0.8s ease 0.3s;
@@ -149,7 +146,7 @@ img {
 	transition-duration: 2s;
 }
 
-.star-wars:hover .star-wars__image {
+.star-wars:hover .star-wars__starship-image {
 	opacity: 1;
 	animation-name: see-the-starship;
 	animation-duration: 10000s;
@@ -184,7 +181,7 @@ img {
 	}
 }
 
-.star-wars:active .star-wars__image {
+.star-wars:active .star-wars__starship-image {
 	opacity: 1;
 	animation-name: flight-to-hyperspace;
 	animation-duration: 11s;
@@ -216,5 +213,299 @@ img {
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%, -50%, -50000px);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.main__subtitle {
+		font-size: 22px;
+	}
+
+	.star-wars {
+		width: 900px;
+		height: 450px;
+	}
+
+	.wrapper {
+		padding: 40px 15px;
+	}
+
+	.star-wars__title {
+		font-size: 80px;
+		margin: 0 0 30px 0;
+	}
+
+	.star-wars__text {
+		letter-spacing: 8px;
+		padding: 8px 0;
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.main__subtitle {
+		font-size: 20px;
+	}
+
+	.star-wars {
+		width: 800px;
+		height: 400px;
+	}
+
+	.wrapper {
+		padding: 35px 15px;
+	}
+
+	.star-wars__title {
+		font-size: 60px;
+		margin: 0 0 30px 0;
+	}
+
+	.star-wars__box-text {
+		margin: 580px 0 0 0;
+	}
+
+	.star-wars__text {
+		letter-spacing: 5px;
+		padding: 5px 0;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.main__title {
+		font-size: 18px;
+		margin: 0 0 70px 0;
+	}
+
+	.main__subtitle {
+		font-size: 18px;
+	}
+
+	.star-wars {
+		width: 700px;
+		height: 350px;
+	}
+
+	.wrapper {
+		padding: 30px 15px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 85px auto;
+	}
+
+	.star-wars__title {
+		font-size: 40px;
+		margin: 0 0 30px 0;
+	}
+
+	.star-wars__box-text {
+		margin: 560px 0 0 0;
+	}
+
+	.star-wars__text {
+		letter-spacing: 4px;
+		padding: 4px 0;
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.main__title {
+		font-size: 18px;
+		margin: 0 0 60px 0;
+	}
+
+	.main__subtitle {
+		font-size: 16px;
+	}
+
+	.star-wars {
+		width: 650px;
+		height: 325px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 80px auto;
+	}
+
+	.star-wars__title {
+		font-size: 30px;
+		margin: 0 0 20px 0;
+	}
+
+	.star-wars__box-text {
+		margin: 550px 0 0 0;
+	}
+
+	.star-wars__text {
+		letter-spacing: 3px;
+		padding: 3px 0;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.header__title {
+		font-size: 70px;
+	}
+
+	.main__subtitle {
+		font-size: 13px;
+	}
+
+	.star-wars {
+		width: 550px;
+		height: 275px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 75px auto;
+	}
+
+	.star-wars__box-text {
+		margin: 500px 0 0 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.header__title {
+		font-size: 60px;
+	}
+
+	.main__subtitle {
+		font-size: 12px;
+	}
+
+	.star-wars {
+		width: 500px;
+		height: 250px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 70px auto;
+	}
+
+	.star-wars__title {
+		font-size: 20px;
+	}
+
+	.star-wars__box-text {
+		margin: 500px 0 0 0;
+	}
+
+	.star-wars__text {
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.header__title {
+		font-size: 55px;
+		margin: 0 0 40px 0;
+	}
+
+	.main__subtitle {
+		font-size: 11px;
+	}
+
+	.star-wars {
+		width: 450px;
+		height: 225px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 65px auto;
+	}
+
+	.star-wars__box-text {
+		margin: 480px 0 0 0;
+	}
+
+	.star-wars__text {
+		font-size: 8px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.header__title {
+		font-size: 50px;
+	}
+
+	.star-wars {
+		width: 400px;
+		height: 200px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 60px auto;
+	}
+
+	.star-wars__box-text {
+		margin: 470px 0 0 0;
+	}
+
+	.star-wars__text {
+		font-size: 6px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.header__title {
+		font-size: 45px;
+	}
+
+	.star-wars {
+		width: 350px;
+		height: 175px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 55px auto;
+	}
+
+	.star-wars__text {
+		font-size: 5px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.header__title {
+		font-size: 38px;
+	}
+
+	.star-wars {
+		width: 300px;
+		height: 150px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 50px auto;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.header__title {
+		font-size: 34px;
+	}
+
+	.star-wars {
+		width: 250px;
+		height: 125px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 45px auto;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.header__title {
+		font-size: 30px;
+	}
+
+	.main__star-wars {
+		margin: 0 auto 40px auto;
 	}
 }
