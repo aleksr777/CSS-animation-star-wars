@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Star Jedi";
+  src: url("../fonts/StarJedi.woff2") format("woff2"), url("../fonts/StarJedi.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Star Jedi Rounded";
+  src: url("../fonts/StarJediRounded.woff2") format("woff2"), url("../fonts/StarJediRounded.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Star Jedi Hollow";
+  src: url("../fonts/StarJediHollow.woff2") format("woff2"), url("../fonts/StarJediHollow.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
