@@ -2,8 +2,8 @@
  --------------
 * Link: <https://aleksr777.github.io/CSS-animation-star-wars/>
  --------------
-* Это небольшой эксперимент реализации CSS-анимации по тематике "Звёздных войн".
+* Немного поэксперементировал с CSS-анимацией по тематике "Звёздных войн".
 * JS-код не использовался, только HTML и CSS.
  --------------
-* This is a small experiment of implementing Star Wars-themed CSS animations.
+* I experimented a bit with CSS-animation inspired by 'Star Wars'.
 * No JS code was used, only HTML and CSS.
