@@ -7,7 +7,12 @@ body {
 	background-color: #000000;
 }
 
-img {
+picture,
+img,
+source {
+	position: relative;
+	display: block;
+	background: transparent;
 	width: 100%;
 	height: 100%;
 }
@@ -19,33 +24,30 @@ img {
 	margin: 0 auto;
 }
 
+.header__title,
+.main__subtitle {
+	text-align: center;
+	font-weight: 400;	
+}
+
 .header__title {
 	color: #e5b13a;
 	font-family: "Star Jedi Hollow";
 	font-size: 80px;
-	text-align: center;
-	font-weight: 400;
 	padding: 100px 0;
-}
-
-.header__image {
-	text-align: center;
-	margin: 0 0 70px 0;
 }
 
 .main__subtitle {
 	color: #e5b23ad0;
 	font-family: "Star Jedi Rounded";
-	text-align: center;
 	font-size: 24px;
 	margin: 0 0 15px 0;
-	font-weight: 400;
 	line-height: 0.9;
 }
 
 .main__animation-block {
 	margin: 0 auto 90px auto;
-	border: #9999CB solid 1px;
+	border: #9999cb solid 1px;
 }
 
 .animation-block {
@@ -55,58 +57,66 @@ img {
 	perspective: 250px;
 	width: 1000px;
 	height: 500px;
-	background: url(../img/space.webp) center / 100% 100% no-repeat;
-	background-color: rgb(0, 0, 0);
+	background: transparent;
 	border-radius: 15px;
 }
 
-.animation-block__wrapper {
+.track {
+	background: url(../img/space.webp) center / 100% 100% no-repeat;
+}
+
+.track__wrapper {
 	position: relative;
 	top: 57px;
 	transform: rotateX(50deg);
 	left: 0;
 	margin: -300px auto 0 auto;
-	color: #e5b13a;
 	width: 100%;
 	height: 300%;
 }
 
-.animation-block__title {
+.track__title {
 	position: relative;
 	font-size: 165px;
 	font-weight: 900;
 	text-align: center;
 	margin: 10px 0;
+	color: #e5b13a;
 }
 
-.animation-block__box-text {
+.track__box-text {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin: 0 auto;
 	width: 97%;
 	top: 1360px;
+	color: #e5b13a;
 }
 
-.animation-block__text {
+.track__text {
 	letter-spacing: 5px;
 	padding: 10px 0;
 	font-size: 16px;
 }
 
-.animation-block:hover .animation-block__wrapper .animation-block__box-text {
+.track:hover .track__wrapper .track__box-text {
 	transition-duration: 90s;
 	margin: -3200px auto 0 auto;
 }
 
-.animation-block__starship-image {
+.space__image-starship {
 	position: absolute;
 	top: 100%;
 	left: 100%;
 	opacity: 0;
 }
 
-.animation-block__hyperspace-image {
+.space {
+	background: url(../img/space.webp) center / 100% 100% no-repeat;
+}
+
+.space__image-hyperspace {
 	position: absolute;
 	top: 43%;
 	left: 49.5%;
@@ -116,23 +126,25 @@ img {
 	opacity: 0;
 }
 
-.animation-block:active > .animation-block__hyperspace-image {
+.space:active > .space__image-hyperspace {
 	opacity: 0.9;
 	transform: translate3d(-50%, -50%, 120px);
-	transition: transform 3s ease 0.3s, opacity 0.8s ease 0.3s;
+	transition:
+		transform 3s ease 0.3s,
+		opacity 0.8s ease 0.3s;
 }
 
-.animation-block:hover {
+.space:hover {
 	background: url(../img/space.webp) center / 105% 105% no-repeat;
 	transition-duration: 2s;
 }
 
-.animation-block:active {
+.space:active {
 	background: url(../img/space.webp) center / 200% 200% no-repeat;
 	transition-duration: 2s;
 }
 
-.animation-block:hover .animation-block__starship-image {
+.space:hover .space__image-starship {
 	opacity: 1;
 	animation-name: see-the-starship;
 	animation-duration: 10000s;
@@ -167,7 +179,7 @@ img {
 	}
 }
 
-.animation-block:active .animation-block__starship-image {
+.space:active .space__image-starship {
 	opacity: 1;
 	animation-name: flight-to-hyperspace;
 	animation-duration: 11s;
@@ -202,6 +214,86 @@ img {
 	}
 }
 
+.desert-sky {
+	background: url(../img/bg.webp) 50% -125px / 100% 100% no-repeat;
+}
+
+.sand__image-left,
+.sand__image-right {
+	position: absolute;
+	bottom: -170px;
+}
+
+.sand__image-left {
+	left: 0;
+	width: 2000px;
+}
+
+.sand__image-right {
+	left: -2000px;
+	width: 2000px;
+}
+
+.animation-block__sand {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	animation-name: sand;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes sand {
+	0% {
+		transform: translate(2000px, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.animation-block__gravity-bike {
+	z-index: 1;
+	display: block;
+	position: relative;
+	top: 25px;
+	right: 0px;
+}
+
+.gravity-bike {
+	width: fit-content;
+	height: 450px;
+	animation-name: gravity-bike;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes gravity-bike {
+	0% {
+		transform: translate(-100%, 0);
+	}
+	25% {
+		transform: translate(50%, 0);
+	}
+	75% {
+		transform: translate(20%, 0);
+	}
+	100% {
+		transform: translate(230%, 0);
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	.main__subtitle {
 		font-size: 22px;
@@ -216,16 +308,16 @@ img {
 		padding: 0 15px 40px;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 155px;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 92%;
 		top: 1280px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 14px;
 	}
 }
@@ -244,22 +336,21 @@ img {
 		padding: 0 15px 35px;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 140px;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 85%;
 		top: 1245px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 13px;
 	}
 }
 
 @media screen and (max-width: 900px) {
-
 	.main__title {
 		font-size: 18px;
 		margin: 0 0 70px 0;
@@ -282,21 +373,21 @@ img {
 		margin: 0 auto 85px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 130px;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 73%;
 		top: 1160px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 11px;
 		padding: 7px 0;
 	}
 
-	.animation-block__wrapper {
+	.track__text-track {
 		transform: rotateX(62deg);
 	}
 }
@@ -320,16 +411,16 @@ img {
 		margin: 0 auto 80px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 120px;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 67%;
 		top: 900px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 8px;
 		letter-spacing: 3px;
 		padding: 4px 0;
@@ -355,20 +446,20 @@ img {
 		margin: 0 auto 75px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 80px;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 57%;
 		top: 880px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 7px;
 	}
 
-	.animation-block:hover .animation-block__wrapper .animation-block__box-text {
+	.space:hover .track__text-track .track__box-text {
 		margin: -2300px auto 0 auto;
 	}
 }
@@ -392,31 +483,31 @@ img {
 		margin: 0 auto 70px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 70px;
 		margin: 7px 0;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 50%;
 		top: 735px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 5px;
 		letter-spacing: 2px;
 		padding: 3px 0;
 	}
 
-	.animation-block:hover .animation-block__wrapper .animation-block__box-text {
+	.space:hover .track__text-track .track__box-text {
 		margin: -2000px auto 0 auto;
 	}
 
-	.animation-block:hover {
+	.space:hover {
 		background: url(../img/space.webp) center / 100% 100% no-repeat;
 	}
 
-	.animation-block:active {
+	.space:active {
 		background: url(../img/space.webp) center / 100% 100% no-repeat;
 	}
 }
@@ -439,24 +530,23 @@ img {
 		margin: 0 auto 65px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 50px;
 		margin: 5px 0;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 43%;
 		top: 620px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 3px;
 		letter-spacing: 1px;
 	}
 }
 
 @media screen and (max-width: 500px) {
-
 	.wrapper {
 		padding: 0 10px 30px;
 	}
@@ -476,16 +566,16 @@ img {
 		padding: 0;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 30px;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 35%;
 		top: 615px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		padding: 2px 0;
 	}
 }
@@ -504,21 +594,21 @@ img {
 		margin: 0 auto 55px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 25px;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 26%;
 		top: 548px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 2px;
 		letter-spacing: 0;
 	}
 
-	.animation-block:hover .animation-block__wrapper .animation-block__box-text {
+	.space:hover .track__text-track .track__box-text {
 		margin: -1300px auto 0 auto;
 	}
 }
@@ -537,22 +627,22 @@ img {
 		margin: 0 auto 50px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 15px;
 		margin: 4px 0;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 17%;
 		top: 560px;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 2px;
 		padding: 1px 0;
 	}
 
-	.animation-block:hover .animation-block__wrapper .animation-block__box-text {
+	.space:hover .track__text-track .track__box-text {
 		margin: -500px auto 0 auto;
 	}
 }
@@ -571,22 +661,22 @@ img {
 		margin: 0 auto 45px auto;
 	}
 
-	.animation-block__title {
+	.track__title {
 		font-size: 5px;
 		margin: 1px 0;
 	}
 
-	.animation-block__text {
+	.track__text {
 		font-size: 1px;
 		padding: 0;
 	}
 
-	.animation-block__box-text {
+	.track__box-text {
 		width: 6%;
 		top: 521px;
 	}
 
-	.animation-block:hover .animation-block__wrapper .animation-block__box-text {
+	.space:hover .track__text-track .track__box-text {
 		margin: -200px auto 0 auto;
 	}
 }
