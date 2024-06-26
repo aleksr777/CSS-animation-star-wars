@@ -94,7 +94,7 @@ source {
 
 .track:hover .track__title {
 	animation-name: go-title;
-	animation-duration: 13s;
+	animation-duration: 10s;
 	animation-timing-function: ease-out;
 	animation-delay: 0s;
 	animation-iteration-count: 1;
@@ -108,17 +108,18 @@ source {
 		opacity: 0;
 		transform: translate(-50%, -50%) scale(10);
 	}
-
 	40% {
 		opacity: 1;
 		transform: translate(-50%, -50%) scale(1);
 	}
-
 	50% {
 		transform: translate(-50%, -50%) scale(1);
 	}
-
+	80% {
+		opacity: 1;
+	}
 	100% {
+		opacity: 0;
 		transform: translate(-50%, -50%) scale(0);
 	}
 }
@@ -145,7 +146,7 @@ source {
 	animation-name: go-text;
 	animation-duration: 100s;
 	animation-timing-function: linear;
-	animation-delay: 14s;
+	animation-delay: 10s;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 	animation-fill-mode: none;
@@ -157,11 +158,9 @@ source {
 		margin: 0 auto 0 auto;
 		opacity: 1;
 	}
-
 	70% {
 		opacity: 1;
 	}
-
 	100% {
 		margin: -3700px auto 0 auto;
 		opacity: 0;
@@ -219,14 +218,12 @@ source {
 		left: 50%;
 		transform: translate3d(-50%, 50%, 500px);
 	}
-
 	0.015% {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%, -50%, 0);
 	}
-
 	100% {
 		position: absolute;
 		top: 50%;
@@ -253,14 +250,12 @@ source {
 		left: 50%;
 		transform: translate3d(-50%, -50%, 0);
 	}
-
 	8% {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate3d(-50%, -50%, 0);
 	}
-
 	100% {
 		position: absolute;
 		top: 50%;
