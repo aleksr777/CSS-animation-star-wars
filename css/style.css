@@ -82,12 +82,45 @@ source {
 }
 
 .track__title {
-	position: relative;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(70);
 	font-size: 165px;
 	font-weight: 900;
 	text-align: center;
-	margin: 10px 0;
-	color: #e5b13a;
+	color: #ab8100;
+}
+
+.track:hover .track__title {
+	animation-name: go-title;
+	animation-duration: 13s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+@keyframes go-title {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(10);
+	}
+
+	40% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+	}
 }
 
 .track__box-text {
@@ -98,6 +131,8 @@ source {
 	width: 97%;
 	top: 1360px;
 	color: #e5b13a;
+	opacity: 0;
+	transition: all 0.4s ease 0s;
 }
 
 .track__text {
@@ -106,9 +141,31 @@ source {
 	font-size: 16px;
 }
 
-.track:hover .track__wrapper .track__box-text {
-	transition-duration: 90s;
-	margin: -3200px auto 0 auto;
+.track:hover .track__box-text {
+	animation-name: go-text;
+	animation-duration: 100s;
+	animation-timing-function: linear;
+	animation-delay: 14s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+@keyframes go-text {
+	0% {
+		margin: 0 auto 0 auto;
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		margin: -3700px auto 0 auto;
+		opacity: 0;
+	}
 }
 
 .space__image-starship {
@@ -403,6 +460,11 @@ source {
 	.main__subtitle {
 		font-size: 18px;
 	}
+
+	.track:hover .track__box-text {
+		animation-duration: 110s;
+	}
+
 	.track__title {
 		font-size: 130px;
 	}
@@ -454,6 +516,10 @@ source {
 		margin: 0 auto 80px auto;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 120s;
+	}
+
 	.track__title {
 		font-size: 120px;
 	}
@@ -502,6 +568,10 @@ source {
 		margin: 0 auto 75px auto;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 130s;
+	}
+
 	.track__title {
 		font-size: 80px;
 	}
@@ -548,8 +618,12 @@ source {
 		margin: 0 auto 70px auto;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 160s;
+	}
+
 	.track__title {
-		font-size: 70px;
+		font-size: 75px;
 		margin: 7px 0;
 	}
 
@@ -604,8 +678,12 @@ source {
 		margin: 0 auto 65px auto;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 200s;
+	}
+
 	.track__title {
-		font-size: 50px;
+		font-size: 75px;
 		margin: 5px 0;
 	}
 
@@ -649,20 +727,26 @@ source {
 		padding: 0;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 400s;
+	}
+
 	.track__wrapper {
 		transform: rotateX(77deg);
 	}
 
 	.track__title {
-		font-size: 30px;
+		font-size: 70px;
 	}
 
 	.track__box-text {
 		width: 8%;
-		top: 810px;
+		top: 638px;
 	}
 
 	.track__text {
+		font-size: 1px;
+		letter-spacing: 1px;
 		padding: 1px 0;
 	}
 
@@ -685,17 +769,21 @@ source {
 		margin: 0 auto 45px auto;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 600s;
+	}
+
 	.track__wrapper {
 		transform: rotateX(70deg);
 	}
 
 	.track__box-text {
 		width: 12%;
-		top: 615px;
+		top: 540px;
 	}
 
 	.track__title {
-		font-size: 25px;
+		font-size: 65px;
 	}
 
 	.track__text {
@@ -730,17 +818,21 @@ source {
 		margin: 0 auto 50px auto;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 750s;
+	}
+
 	.track__wrapper {
 		transform: rotateX(65deg);
 	}
 
 	.track__box-text {
 		width: 10%;
-		top: 627px;
+		top: 520px;
 	}
 
 	.track__title {
-		font-size: 15px;
+		font-size: 55px;
 		margin: 4px 0;
 	}
 
@@ -772,16 +864,20 @@ source {
 		margin: 0 auto 40px auto;
 	}
 
+	.track:hover .track__box-text {
+		animation-duration: 900s;
+	}
+
 	.track__wrapper {
 		transform: rotateX(60deg);
 	}
 
 	.track__box-text {
-		top: 616px;
+		top: 485px;
 	}
 
 	.track__title {
-		font-size: 5px;
+		font-size: 50px;
 		margin: 1px 0;
 	}
 
