@@ -1,11 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-queries.css">
     <title>CSS-animation. Star Wars.</title>
 </head>
 
@@ -20,15 +21,11 @@
         <main class="main">
 
             <h2 class="main__subtitle">Just hover over the image</h2>
-
             <div class="main__animation-block animation-block track">
-
                 <h3 class="track__title">STAR<br>WARS</h3>
-
                 <div class="track__wrapper">
                     <div style="opacity: 0;">----prop----</div>
                     <div class="track__box-text">
-
                         <p class="track__text">
                             Turmoil has engulfed the
                             Galactic Republic. The taxation
@@ -177,39 +174,154 @@
             </div>
 
             <h2 class="main__subtitle">Hover over the image, then click and hold the mouse button!</h2>
-
             <div class="main__animation-block animation-block space">
-
                 <div class="space__image-hyperspace">
                     <picture>
-                        <img src="img/hyperspace.webp" alt="Starship." draggable="false" />
+                        <img src="img/hyperspace.webp" alt="Starship." draggable="false">
                     </picture>
                 </div>
                 <div class="space__image-starship">
                     <picture>
-                        <img src="img/starship.webp" alt="Starship." draggable="false" />
+                        <img src="img/starship.webp" alt="Starship." draggable="false">
                     </picture>
                 </div>
             </div>
 
             <h2 class="main__subtitle">Just hover over the image</h2>
-
             <div class="main__animation-block animation-block desert-sky">
                 <div class="animation-block__gravity-bike gravity-bike">
                     <picture>
-                        <img src="img/gravity-bike.webp" alt="The Mandalorian on a gravity bike." draggable="false" />
+                        <img src="img/gravity-bike.webp" alt="The Mandalorian on a gravity bike." draggable="false">
                     </picture>
                 </div>
                 <div class="animation-block__sand sand">
                     <div class="sand__image-left">
                         <picture>
-                            <img src="img/sand.webp" alt="Desert landscape." draggable="false" />
+                            <img src="img/sand.webp" alt="Desert landscape." draggable="false">
                         </picture>
                     </div>
                     <div class="sand__image-right">
                         <picture>
-                            <img src="img/sand.webp" alt="Desert landscape." draggable="false" />
+                            <img src="img/sand.webp" alt="Desert landscape." draggable="false">
                         </picture>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="main__subtitle">Hover over the image, then click and hold the mouse button!</h2>
+            <div class="main__animation-block animation-block cards">
+                <div class="main__cards">
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/queen-of-spades.webp" alt="Queen of spades." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/jack-of-diamonds.webp" alt="Jack of diamonds." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/queen-of-clubs.webp" alt="Queen of clubs." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/king-of-hearts.webp" alt="King of hearts." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/king-of-spades.webp" alt="King of spades." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/king-of-clubs.webp" alt="King of clubs." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/queen-of-hearts.webp" alt="Queen of hearts." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__card card">
+                        <div class="card__body">
+                            <div class="card__front">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/jack-of-hearts.webp" alt="Jack of hearts." draggable="false">
+                                </picture>
+                            </div>
+                            <div class="card__back">
+                                <picture class="card__picture picture">
+                                    <img class="picture__img" src="img/card-back.webp" alt="Card back." draggable="false">
+                                </picture>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,448 @@
+@import "null.css";
+@import "fonts.css";
+
+body {
+	font-family: "Star Jedi Rounded";
+	user-select: none;
+	background-color: #000000;
+}
+
+picture,
+img,
+source {
+	position: relative;
+	display: block;
+	background: transparent;
+	width: 100%;
+	height: 100%;
+}
+
+.wrapper {
+	padding: 0 15px 50px;
+	min-height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header__title,
+.main__subtitle {
+	text-align: center;
+	font-weight: 400;
+}
+
+.header__title {
+	color: #e5b13a;
+	font-family: "Star Jedi Hollow";
+	font-size: 80px;
+	padding: 100px 0;
+}
+
+.main__subtitle {
+	color: #e5b23ad0;
+	font-family: "Star Jedi Rounded";
+	font-size: 24px;
+	margin: 0 0 15px 0;
+	line-height: 0.9;
+}
+
+.main__animation-block {
+	margin: 0 auto 90px auto;
+	border: #9999cb solid 1px;
+}
+
+.animation-block {
+	opacity: 0.6;
+	font-family: "Star Jedi";
+	font-size: 17px;
+	overflow: hidden;
+	perspective: 250px;
+	width: 1000px;
+	height: 500px;
+	background: transparent;
+	border-radius: 15px;
+	transition: all 0.5s ease 0s;
+}
+
+.animation-block:hover {
+	opacity: 1;
+}
+
+.track {
+	background: url(../img/bg-track.webp) center / 100% 100% no-repeat;
+}
+
+.track__wrapper {
+	position: relative;
+	top: 57px;
+	transform: rotateX(60deg);
+	left: 0;
+	margin: -300px auto 0 auto;
+	width: 100%;
+	height: 300%;
+}
+
+.track__title {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(70);
+	font-size: 165px;
+	font-weight: 900;
+	text-align: center;
+	color: #ab8100;
+}
+
+.track:hover .track__title {
+	animation-name: go-title;
+	animation-duration: 10s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+@keyframes go-title {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(10);
+	}
+	40% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+.track__box-text {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+	width: 97%;
+	top: 1360px;
+	color: #e5b13a;
+	opacity: 0;
+	transition: all 0.4s ease 0s;
+}
+
+.track__text {
+	letter-spacing: 5px;
+	padding: 10px 0;
+	font-size: 16px;
+}
+
+.track:hover .track__box-text {
+	animation-name: go-text;
+	animation-duration: 100s;
+	animation-timing-function: linear;
+	animation-delay: 10s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+@keyframes go-text {
+	0% {
+		margin: 0 auto 0 auto;
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		margin: -3700px auto 0 auto;
+		opacity: 0;
+	}
+}
+
+.space__image-starship {
+	position: absolute;
+	top: 100%;
+	left: 100%;
+}
+
+.space {
+	background: url(../img/space.webp) center / 100% 100% no-repeat;
+}
+
+.space__image-hyperspace {
+	position: absolute;
+	top: 43%;
+	left: 49.5%;
+	transform: translate3d(-50%, -50%, 0);
+	height: 115%;
+	width: 108%;
+	opacity: 0;
+}
+
+.space:active > .space__image-hyperspace {
+	opacity: 1;
+	transform: translate3d(-50%, -50%, 100px);
+	transition:
+		transform 3s ease 0.3s,
+		opacity 0.8s ease 0.3s;
+}
+
+.space:active {
+	background: url(../img/space.webp) center / 200% 200% no-repeat;
+	transition-duration: 2s;
+}
+
+.space:hover .space__image-starship {
+	animation-name: see-the-starship;
+	animation-duration: 10000s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes see-the-starship {
+	0% {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, 50%, 500px);
+	}
+	0.015% {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+	100% {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+}
+
+.space:active .space__image-starship {
+	animation-name: flight-to-hyperspace;
+	animation-duration: 10s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes flight-to-hyperspace {
+	0% {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+	8% {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+	100% {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, -70000px);
+	}
+}
+
+.desert-sky {
+	background: url(../img/desert-sky.webp) 50% 50% / 100% 100% no-repeat;
+}
+
+.sand__image-left,
+.sand__image-right {
+	position: absolute;
+	bottom: -170px;
+}
+
+.sand__image-left {
+	left: 0;
+	width: 2000px;
+}
+
+.sand__image-right {
+	left: -2000px;
+	width: 2000px;
+}
+
+.animation-block__sand {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.animation-block:hover .animation-block__sand {
+	animation-name: sand;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes sand {
+	0% {
+		transform: translate(2000px, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.animation-block__gravity-bike {
+	z-index: 1;
+	display: block;
+	position: relative;
+	top: 25px;
+	right: 0px;
+}
+.gravity-bike {
+	height: 450px;
+	display: none;
+}
+
+.animation-block:hover .gravity-bike {
+	display: block;
+	width: fit-content;
+	animation-name: gravity-bike;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: backwards;
+	animation-play-state: running;
+}
+
+@keyframes gravity-bike {
+	0% {
+		transform: translate(-100%, 0);
+	}
+	25% {
+		transform: translate(50%, 0);
+	}
+	75% {
+		transform: translate(20%, 0);
+	}
+	100% {
+		transform: translate(230%, 0);
+	}
+}
+
+.cards {
+	background: url(../img/space.webp) center center / 100% 100% no-repeat;
+}
+
+.main__cards {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 50% 50%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	height: 95%;
+	width: 95%;
+}
+
+.card__body {
+	position: relative;
+	width: 148px;
+	height: 206px;
+	transform-style: preserve-3d;
+	transition: all 1s ease 0s;
+}
+
+.card__front {
+	transform: rotateY(-180deg);
+	backface-visibility: hidden;
+	background: url(../img/joker.webp) center center / 30% no-repeat;
+}
+
+.card__front,
+.card__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: 1px solid #e5b23ad0;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.card__picture {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.card__front:active > .card__picture > img {
+	transform: scale(1.5);
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.card__front:active {
+	background: url(../img/joker.webp) 0 0 / 100% no-repeat;
+	transition: all 0.3s;
+}
+
+.card__back {
+	z-index: 2;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+}
+
+.card:hover .card__body {
+	transform: rotateY(-180deg);
+}
+
+.picture {
+	display: block;
+	user-select: none;
+	aspect-ratio: 1 / 1;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.picture__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
