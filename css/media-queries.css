@@ -37,6 +37,15 @@
     .gravity-bike {
         height: 400px;
     }
+
+    .cards {
+        padding: 10px 30px 10px 30px;
+    }
+
+    .card__box {
+        width: 125px;
+        height: 174px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -77,6 +86,11 @@
 
     .gravity-bike {
         height: 350px;
+    }
+
+    .card__box {
+        width: 115px;
+        height: 160px;
     }
 }
 
@@ -133,6 +147,11 @@
     .gravity-bike {
         height: 300px;
     }
+
+    .card__box {
+        width: 104px;
+        height: 145px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -184,6 +203,11 @@
 
     .gravity-bike {
         height: 280px;
+    }
+
+    .card__box {
+        width: 92px;
+        height: 128px;
     }
 }
 
@@ -238,6 +262,15 @@
 
     .gravity-bike {
         height: 235px;
+    }
+
+    .cards {
+        padding: 7px 25px 7px 25px;
+    }
+
+    .card__box {
+        width: 79px;
+        height: 110px;
     }
 }
 
@@ -300,6 +333,11 @@
     .gravity-bike {
         height: 215px;
     }
+
+    .card__box {
+        width: 69px;
+        height: 97px;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -346,6 +384,15 @@
 
     .gravity-bike {
         height: 190px;
+    }
+
+    .cards {
+        padding: 7px 20px 7px 20px;
+    }
+
+    .card__box {
+        width: 61px;
+        height: 85px;
     }
 }
 
@@ -394,6 +441,11 @@
 
     .gravity-bike {
         height: 165px;
+    }
+
+    .card__box {
+        width: 54px;
+        height: 75px;
     }
 }
 
@@ -444,6 +496,15 @@
     .gravity-bike {
         height: 140px;
     }
+
+    .cards {
+        padding: 5px 15px 5px 15px;
+    }
+
+    .card__box {
+        width: 47px;
+        height: 66px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -489,6 +550,11 @@
 
     .gravity-bike {
         height: 115px;
+    }
+
+    .card__box {
+        width: 44px;
+        height: 61px;
     }
 }
 
@@ -538,6 +604,15 @@
 
     .gravity-bike {
         height: 90px;
+    }
+
+    .card__box {
+        width: 38px;
+        height: 53px;
+    }
+
+    .cards {
+        padding: 3px 7px 3px 7px;
     }
 }
 
