@@ -351,79 +351,20 @@ source {
 	}
 }
 
-.cards {
+.cards-block {
 	background: url(../img/space.webp) center center / 100% 100% no-repeat;
 	width: 100%;
 	height: 100%;
 	padding: 10px 35px 10px 35px;
-}
-
-.main__cards {
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 50% 50%;
 	gap: 1px;
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
-}
-
-.card__box {
-	position: relative;
-	width: 148px;
-	height: 206px;
-	transform-style: preserve-3d;
-	transition: all 1s ease 0s;
-}
-
-.card__front {
-	transform: rotateY(-180deg);
-	backface-visibility: hidden;
-	background: url(../img/joker.webp) center center / 30% no-repeat;
-}
-
-.card__front,
-.card__back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: rgb(255, 255, 255);
-	border-radius: 8%;
-	outline: #E5AD36 solid 1px;
-	overflow: hidden;
-}
-
-.card__picture {
-	position: relative;
-	margin: 0;
-	padding: 0;
-}
-
-.card__front:active > .card__picture > img {
-	transform: scale(1.5);
-	opacity: 0;
-	transition: all 0.3s;
-}
-
-.card__front:active {
-	background: url(../img/joker.webp) 0 0 / 100% no-repeat;
-	transition: all 0.3s;
-}
-
-.card__back {
-	z-index: 2;
-	transform: rotateY(0deg);
-	backface-visibility: hidden;
-}
-
-.card:hover .card__box {
-	transform: rotateY(-180deg);
 }
 
 .picture {
@@ -444,4 +385,57 @@ source {
 	object-position: center center;
 	padding: 0;
 	margin: 0;
+}
+
+.main__card {
+	position: relative;
+}
+
+.card {
+	width: 148px;
+	height: 206px;
+	cursor: pointer;
+}
+
+.card__front,
+.card__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	transition: all 0.8s ease 0s;
+	border-radius: 10px;
+	background: center / cover no-repeat;
+}
+
+.card__front {
+	background: url(../img/joker.webp) center center / 30% no-repeat;
+	transform: perspective(800px) rotateY(180deg);
+}
+
+.card__back {
+	transform: perspective(800px) rotateY(0);
+}
+
+.card:hover .card__front {
+	transform: perspective(800px) rotateY(0);
+}
+
+.card:hover .card__back {
+	transform: perspective(800px) rotateY(-180deg);
+}
+
+.card__front:active > .card__picture > img {
+	transform: scale(1.5);
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.card__front:active {
+	background: url(../img/joker.webp) 0 0 / 100% no-repeat;
+	transition: all 0.3s;
 }
