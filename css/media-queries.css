@@ -38,13 +38,13 @@
         height: 400px;
     }
 
-    .cards {
+    .cards-block {
         padding: 10px 30px 10px 30px;
     }
 
     .card {
-        width: 125px;
-        height: 174px;
+        width: 130px;
+        height: 182px;
     }
 }
 
@@ -206,8 +206,13 @@
     }
 
     .card {
-        width: 92px;
-        height: 128px;
+        width: 95px;
+        height: 133px;
+    }
+
+    .card__front,
+    .card__back {
+        border-radius: 9px;
     }
 }
 
@@ -264,13 +269,18 @@
         height: 235px;
     }
 
-    .cards {
-        padding: 7px 25px 7px 25px;
+    .cards-block {
+        padding: 7px 20px 7px 20px;
     }
 
     .card {
-        width: 79px;
-        height: 110px;
+        width: 83px;
+        height: 117px;
+    }
+
+    .card__front,
+    .card__back {
+        border-radius: 8px;
     }
 }
 
@@ -335,8 +345,13 @@
     }
 
     .card {
-        width: 69px;
-        height: 97px;
+        width: 75px;
+        height: 105px;
+    }
+
+    .card__front,
+    .card__back {
+        border-radius: 7px;
     }
 }
 
@@ -386,13 +401,18 @@
         height: 190px;
     }
 
-    .cards {
+    .cards-block {
         padding: 7px 20px 7px 20px;
     }
 
     .card {
-        width: 61px;
-        height: 85px;
+        width: 67px;
+        height: 93px;
+    }
+
+    .card__front,
+    .card__back {
+        border-radius: 6px;
     }
 }
 
@@ -444,8 +464,13 @@
     }
 
     .card {
-        width: 54px;
-        height: 75px;
+        width: 58px;
+        height: 81px;
+    }
+
+    .card__front,
+    .card__back {
+        border-radius: 5px;
     }
 }
 
@@ -497,13 +522,13 @@
         height: 140px;
     }
 
-    .cards {
+    .cards-block {
         padding: 5px 15px 5px 15px;
     }
 
     .card {
-        width: 47px;
-        height: 66px;
+        width: 50px;
+        height: 70px;
     }
 }
 
@@ -553,8 +578,13 @@
     }
 
     .card {
-        width: 44px;
-        height: 61px;
+        width: 45px;
+        height: 63px;
+    }
+
+    .card__front,
+    .card__back {
+        border-radius: 4px;
     }
 }
 
@@ -607,21 +637,16 @@
     }
 
     .card {
-        width: 38px;
-        height: 53px;
+        width: 37px;
+        height: 52px;
     }
 
-    .cards {
+    .cards-block {
         padding: 3px 7px 3px 7px;
     }
-}
 
-@media screen and (max-width: 300px) {
-    .header__title {
-        font-size: 30px;
-    }
-
-    .main__animation-block {
-        margin: 0 auto 40px auto;
+    .card__front,
+    .card__back {
+        border-radius: 3px;
     }
 }
